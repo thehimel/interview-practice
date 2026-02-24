@@ -1,0 +1,6 @@
+[tool.ruff]
+line-length = 120
+exclude = ["migrations", ".venv", "node_modules"]
+
+[tool.pytest.ini_options]
+addopts = ["--ignore-glob=**/test_exercise.py"]
