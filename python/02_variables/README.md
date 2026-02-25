@@ -21,3 +21,7 @@ Given the list `DATA = ["Apple", 2, 4.2]`:
 **Output (types):** `(str, int, float)`
 
 **Global variables after assignment:** `X == "Apple"`, `Y == 2`, `Z == 4.2`
+
+## Resources
+
+- [Python Variables](https://www.w3schools.com/python/python_variables_multiple.asp)

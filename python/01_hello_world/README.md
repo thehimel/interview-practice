@@ -21,4 +21,4 @@ Hello, World!
 
 ## Resources
 
-* https://www.w3schools.com/python/python_syntax.asp
+- [Python Getting Started](* https://www.w3schools.com/python/python_syntax.asp)
