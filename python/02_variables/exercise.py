@@ -1,6 +1,5 @@
 DATA = ["Apple", 2, 4.2]
-
-name, quantity, weight = DATA
+X = Y = Z = None
 
 
 def get_types():
