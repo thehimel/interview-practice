@@ -1,10 +1,13 @@
-from exercise import hello_world
+from importlib import import_module
 
-from test_solution import (
+from test_hello_world_common import (
     _DIR,
     assert_hello_world_returns_expected_string,
     assert_main_prints_hello_world,
 )
+
+exercise = import_module("01_hello_world.exercise")
+hello_world = exercise.hello_world
 
 _SCRIPT_NAME = "exercise.py"
 

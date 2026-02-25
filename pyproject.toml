@@ -3,4 +3,9 @@ line-length = 120
 exclude = ["migrations", ".venv", "node_modules"]
 
 [tool.pytest.ini_options]
-addopts = ["--ignore-glob=**/test_exercise.py", "--ignore-glob=**/template/**"]
+addopts = [
+    "--ignore-glob=**/test_*_exercise.py",
+    "--ignore-glob=**/test_*_common.py",
+    "--ignore-glob=**/template/**",
+]
+pythonpath = ["python", "python/01_hello_world", "python/02_variables", "python/template"]
