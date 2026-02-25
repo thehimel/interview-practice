@@ -8,4 +8,4 @@ addopts = [
     "--ignore-glob=**/test_*_common.py",
     "--ignore-glob=**/template/**",
 ]
-pythonpath = ["python", "python/01_hello_world", "python/02_variables", "python/03_casting", "python/template"]
+pythonpath = ["python", "python/01_hello_world", "python/02_variables", "python/03_casting", "python/04_strings", "python/template"]
