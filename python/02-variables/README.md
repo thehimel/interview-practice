@@ -24,17 +24,15 @@ Given the list `DATA = ["Apple", 2, 4.2]`:
 
 ## File Structure
 
-- `solution.py` – Reference implementation
-- `exercise.py` – Stub for practice
-- `test_variables_solution.py` – Test logic and solution tests
-- `test_variables_exercise.py` – Exercise tests (uses logic from solution test file)
+- `solutions/` – Reference implementation and solution tests
+- `exercises/` – Stub for practice and exercise tests
 
 ## Running Tests
 
 ```bash
 # From project root
-pytest python/02-variables/test_variables_solution.py -v   # Run solution tests
-pytest python/02-variables/test_variables_exercise.py -v   # Run exercise tests
+pytest python/02-variables/solutions/ -v   # Run solution tests
+pytest python/02-variables/exercises/ -v   # Run exercise tests
 ```
 
 ## PyCharm Import Warnings

@@ -107,17 +107,20 @@ interview-practice/
          │
          │ 3. Read files from disk
          │    content/python/01-hello-world/README.md
-         │    content/python/01-hello-world/exercise.py
-         │    content/python/01-hello-world/test_*.py
+         │    content/python/01-hello-world/exercises/hello_world.py
+         │    content/python/01-hello-world/solutions/test_*.py
          ▼
 ┌─────────────────────────────────────────────────────────────────────────────────┐
 │  Filesystem (repo root)                                                           │
 │  content/python/  content/sql/  content/system-design/  content/microservices/    │
 │  └── 01-hello-world/                                                             │
 │      ├── README.md                                                                │
-│      ├── exercise.py                                                              │
-│      ├── solution.py                                                              │
-│      └── test_*.py                                                                │
+│      ├── solutions/                                                               │
+│      │   ├── hello_world.py                                                       │
+│      │   └── test_*.py                                                            │
+│      └── exercises/                                                               │
+│          ├── hello_world.py                                                       │
+│          └── test_*.py                                                            │
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
 

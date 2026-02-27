@@ -21,17 +21,15 @@ Hello, World!
 
 ## File Structure
 
-- `solution.py` – Reference implementation
-- `exercise.py` – Stub for practice
-- `test_hello_world_solution.py` – Test logic and solution tests
-- `test_hello_world_exercise.py` – Exercise tests (uses logic from solution test file)
+- `solutions/` – Reference implementation and solution tests
+- `exercises/` – Stub for practice and exercise tests
 
 ## Running Tests
 
 ```bash
 # From project root
-pytest python/01-hello-world/test_hello_world_solution.py -v   # Run solution tests
-pytest python/01-hello-world/test_hello_world_exercise.py -v   # Run exercise tests
+pytest python/01-hello-world/solutions/ -v   # Run solution tests
+pytest python/01-hello-world/exercises/ -v   # Run exercise tests
 ```
 
 ## PyCharm Import Warnings

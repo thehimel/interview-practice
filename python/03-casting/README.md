@@ -17,17 +17,15 @@ Python uses constructor functions to convert between types. Given `DATA = ["222"
 
 ## File Structure
 
-- `solution.py` – Reference implementation
-- `exercise.py` – Stub for practice
-- `test_casting_solution.py` – Test logic and solution tests
-- `test_casting_exercise.py` – Exercise tests (uses logic from solution test file)
+- `solutions/` – Reference implementation and solution tests
+- `exercises/` – Stub for practice and exercise tests
 
 ## Running Tests
 
 ```bash
 # From project root
-pytest python/03-casting/test_casting_solution.py -v   # Run solution tests
-pytest python/03-casting/test_casting_exercise.py -v   # Run exercise tests
+pytest python/03-casting/solutions/ -v   # Run solution tests
+pytest python/03-casting/exercises/ -v   # Run exercise tests
 ```
 
 ## PyCharm Import Warnings
