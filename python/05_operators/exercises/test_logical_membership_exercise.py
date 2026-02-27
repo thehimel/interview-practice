@@ -1,0 +1,5 @@
+from solutions.test_logical_membership_solution import create_logical_membership_test_class
+
+from .logical_membership import check
+
+TestLogicalMembershipExercise = create_logical_membership_test_class(check)
