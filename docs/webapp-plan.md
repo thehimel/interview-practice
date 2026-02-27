@@ -86,12 +86,12 @@ interview-practice/
 ┌─────────────────────────────────────────────────────────────────────────────────┐
 │  Browser (Frontend)                                                               │
 │  ┌─────────────────────────────────────────────────────────────────────────────┐│
-│  │  User visits /exercise/python/01_hello_world                                 ││
+│  │  User visits /exercise/python/01-hello-world                                 ││
 │  │  User edits code in Monaco, clicks Run                                       ││
 │  └─────────────────────────────────────────────────────────────────────────────┘│
 └─────────────────────────────────────────────────────────────────────────────────┘
          │
-         │ 1. GET /api/exercises/python/01_hello_world
+         │ 1. GET /api/exercises/python/01-hello-world
          │    → Returns { problem, starterCode, ... }
          │
          │ 2. POST /api/run { tech, slug, code }
@@ -106,14 +106,14 @@ interview-practice/
 └─────────────────────────────────────────────────────────────────────────────────┘
          │
          │ 3. Read files from disk
-         │    content/python/01_hello_world/README.md
-         │    content/python/01_hello_world/exercise.py
-         │    content/python/01_hello_world/test_*.py
+         │    content/python/01-hello-world/README.md
+         │    content/python/01-hello-world/exercise.py
+         │    content/python/01-hello-world/test_*.py
          ▼
 ┌─────────────────────────────────────────────────────────────────────────────────┐
 │  Filesystem (repo root)                                                           │
 │  content/python/  content/sql/  content/system-design/  content/microservices/    │
-│  └── 01_hello_world/                                                             │
+│  └── 01-hello-world/                                                             │
 │      ├── README.md                                                                │
 │      ├── exercise.py                                                              │
 │      ├── solution.py                                                              │
@@ -182,8 +182,8 @@ flowchart TB
 
 ```json
 [
-  { "tech": "python", "slug": "01_hello_world", "title": "Hello World", "difficulty": "easy" },
-  { "tech": "python", "slug": "02_variables", "title": "Variables", "difficulty": "easy" },
+  { "tech": "python", "slug": "01-hello-world", "title": "Hello World", "difficulty": "easy" },
+  { "tech": "python", "slug": "02-variables", "title": "Variables", "difficulty": "easy" },
   { "tech": "sql", "slug": "01_select_basics", "title": "SELECT Basics", "difficulty": "easy" },
   ...
 ]
@@ -203,7 +203,7 @@ flowchart TB
 **Request:**
 
 ```json
-{ "tech": "python", "slug": "01_hello_world", "code": "def hello_world(): ..." }
+{ "tech": "python", "slug": "01-hello-world", "code": "def hello_world(): ..." }
 ```
 
 **Response:**
@@ -224,7 +224,7 @@ flowchart TB
 
 2. **Frontend:** Next.js app with:
    - Exercise list on `/` (filterable by technology)
-   - Exercise page at `/exercise/python/01_hello_world` or `/exercise/sql/01_select_basics`
+   - Exercise page at `/exercise/python/01-hello-world` or `/exercise/sql/01_select_basics`
    - Problem text rendered from README markdown via `next-mdx-remote` or `@next/mdx`
    - Monaco Editor for code editing (SQL, Python, etc.)
    - Run and Submit buttons that call `/api/run`

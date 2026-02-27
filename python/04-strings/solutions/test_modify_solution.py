@@ -1,6 +1,6 @@
 from importlib import import_module
 
-modify = import_module("04_strings.solutions.modify")
+modify = import_module("04-strings.solutions.modify")
 
 
 def create_modify_test_class(module):

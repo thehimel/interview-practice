@@ -26,15 +26,15 @@ Python uses constructor functions to convert between types. Given `DATA = ["222"
 
 ```bash
 # From project root
-pytest python/03_casting/test_casting_solution.py -v   # Run solution tests
-pytest python/03_casting/test_casting_exercise.py -v   # Run exercise tests
+pytest python/03-casting/test_casting_solution.py -v   # Run solution tests
+pytest python/03-casting/test_casting_exercise.py -v   # Run exercise tests
 ```
 
 ## PyCharm Import Warnings
 
 If PyCharm underlines imports in red, mark this directory as a **Sources Root**:
 
-1. Right-click `python/03_casting` in the Project tool window
+1. Right-click `python/03-casting` in the Project tool window
 2. **Mark Directory as** → **Sources Root**
 
 This adds the directory to the Python path so PyCharm can resolve imports. Restart PyCharm if the warnings persist.

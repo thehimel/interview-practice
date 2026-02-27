@@ -138,15 +138,15 @@ Both return the lowest index where the substring is found. The difference is whe
 
 ```bash
 # From project root
-pytest python/04_strings/solutions/ -v   # Run solution tests
-pytest python/04_strings/exercises/ -v   # Run exercise tests
+pytest python/04-strings/solutions/ -v   # Run solution tests
+pytest python/04-strings/exercises/ -v   # Run exercise tests
 ```
 
 ## PyCharm Import Warnings
 
 If PyCharm underlines imports in red, mark this directory as a **Sources Root**:
 
-1. Right-click `python/04_strings` in the Project tool window
+1. Right-click `python/04-strings` in the Project tool window
 2. **Mark Directory as** → **Sources Root**
 
 This adds the directory to the Python path so PyCharm can resolve imports. Restart PyCharm if the warnings persist.

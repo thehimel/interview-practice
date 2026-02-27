@@ -1,7 +1,7 @@
 import pytest
 from importlib import import_module
 
-identity_module = import_module("05_operators.solutions.identity")
+identity_module = import_module("05-operators.solutions.identity")
 identity_check = identity_module.identity_check
 equality_check = identity_module.equality_check
 

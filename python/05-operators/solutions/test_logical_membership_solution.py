@@ -1,6 +1,6 @@
 from importlib import import_module
 
-check = import_module("05_operators.solutions.logical_membership").check
+check = import_module("05-operators.solutions.logical_membership").check
 
 
 def create_logical_membership_test_class(fn):

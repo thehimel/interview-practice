@@ -24,5 +24,5 @@ def create_variables_test_class(module):
     return TestVariables
 
 
-solution = import_module("02_variables.solution")
+solution = import_module("02-variables.solution")
 TestVariablesSolution = create_variables_test_class(solution)

@@ -9,4 +9,4 @@ addopts = [
     "--ignore-glob=**/template/**",
     "--import-mode=importlib",
 ]
-pythonpath = ["python", "python/01_hello_world", "python/02_variables", "python/03_casting", "python/template"]
+pythonpath = ["python", "python/01-hello-world", "python/02-variables", "python/03-casting", "python/template"]

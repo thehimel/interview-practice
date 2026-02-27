@@ -1,6 +1,6 @@
 from importlib import import_module
 
-slicing = import_module("04_strings.solutions.slicing")
+slicing = import_module("04-strings.solutions.slicing")
 
 
 def create_slicing_test_class(module):

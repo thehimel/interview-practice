@@ -15,5 +15,5 @@ def create_casting_test_class(cast_fn):
     return TestCasting
 
 
-solution = import_module("03_casting.solution")
+solution = import_module("03-casting.solution")
 TestCastingSolution = create_casting_test_class(solution.cast)

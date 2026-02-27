@@ -1,6 +1,6 @@
 from importlib import import_module
 
-search = import_module("04_strings.solutions.search")
+search = import_module("04-strings.solutions.search")
 
 
 def create_search_test_class(module):

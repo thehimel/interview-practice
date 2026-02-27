@@ -29,7 +29,7 @@ def create_hello_world_test_class(hello_world_fn, script_path: Path):
     return TestHelloWorld
 
 
-solution = import_module("01_hello_world.solution")
+solution = import_module("01-hello-world.solution")
 TestHelloWorldSolution = create_hello_world_test_class(
     solution.hello_world,
     _DIR / "solution.py",

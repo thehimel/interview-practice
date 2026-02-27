@@ -1,7 +1,7 @@
 import pytest
 from importlib import import_module
 
-comparison = import_module("05_operators.solutions.comparison").comparison
+comparison = import_module("05-operators.solutions.comparison").comparison
 
 
 def create_comparison_test_class(fn):

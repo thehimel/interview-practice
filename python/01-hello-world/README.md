@@ -30,15 +30,15 @@ Hello, World!
 
 ```bash
 # From project root
-pytest python/01_hello_world/test_hello_world_solution.py -v   # Run solution tests
-pytest python/01_hello_world/test_hello_world_exercise.py -v   # Run exercise tests
+pytest python/01-hello-world/test_hello_world_solution.py -v   # Run solution tests
+pytest python/01-hello-world/test_hello_world_exercise.py -v   # Run exercise tests
 ```
 
 ## PyCharm Import Warnings
 
 If PyCharm underlines imports in red, mark this directory as a **Sources Root**:
 
-1. Right-click `python/01_hello_world` in the Project tool window
+1. Right-click `python/01-hello-world` in the Project tool window
 2. **Mark Directory as** → **Sources Root**
 
 This adds the directory to the Python path so PyCharm can resolve imports. Restart PyCharm if the warnings persist.

@@ -1,6 +1,6 @@
 from importlib import import_module
 
-concatenation = import_module("04_strings.solutions.concatenation")
+concatenation = import_module("04-strings.solutions.concatenation")
 
 
 def create_concatenation_test_class(module):

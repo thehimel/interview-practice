@@ -1,7 +1,7 @@
 import pytest
 from importlib import import_module
 
-assignment_module = import_module("05_operators.solutions.assignment")
+assignment_module = import_module("05-operators.solutions.assignment")
 assignment = assignment_module.assignment
 walrus = assignment_module.walrus
 

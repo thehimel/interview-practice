@@ -28,15 +28,15 @@ Practice Python operators: arithmetic, assignment, comparison, identity, logical
 
 ```bash
 # From project root
-pytest python/05_operators/solutions/ -v   # Run solution tests
-pytest python/05_operators/exercises/ -v   # Run exercise tests
+pytest python/05-operators/solutions/ -v   # Run solution tests
+pytest python/05-operators/exercises/ -v   # Run exercise tests
 ```
 
 ## PyCharm Import Warnings
 
 If PyCharm underlines imports in red, mark this directory as a **Sources Root**:
 
-1. Right-click `python/05_operators` in the Project tool window
+1. Right-click `python/05-operators` in the Project tool window
 2. **Mark Directory as** → **Sources Root**
 
 This adds the directory to the Python path so PyCharm can resolve imports. Restart PyCharm if the warnings persist.

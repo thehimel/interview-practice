@@ -1,6 +1,6 @@
 from importlib import import_module
 
-format_module = import_module("04_strings.solutions.format")
+format_module = import_module("04-strings.solutions.format")
 
 
 def create_format_test_class(module):
