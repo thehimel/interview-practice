@@ -1,6 +1,7 @@
 import pytest
+from importlib import import_module
 
-from .arithmetic import arithmetic
+arithmetic = import_module("05_operators.solutions.arithmetic").arithmetic
 
 
 def create_arithmetic_test_class(fn):

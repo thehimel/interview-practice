@@ -1,4 +1,6 @@
-from . import types
+from importlib import import_module
+
+types = import_module("04_strings.solutions.types")
 
 
 def create_types_test_class(module):

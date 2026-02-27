@@ -1,4 +1,4 @@
-from solutions.test_concatenation_solution import create_concatenation_test_class
+from ..solutions.test_concatenation_solution import create_concatenation_test_class
 
 from . import concatenation
 

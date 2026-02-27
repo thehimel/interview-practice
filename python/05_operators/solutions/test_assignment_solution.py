@@ -1,6 +1,9 @@
 import pytest
+from importlib import import_module
 
-from .assignment import assignment, walrus
+assignment_module = import_module("05_operators.solutions.assignment")
+assignment = assignment_module.assignment
+walrus = assignment_module.walrus
 
 
 def create_assignment_test_class(assignment_fn, walrus_fn):

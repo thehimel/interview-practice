@@ -7,5 +7,6 @@ addopts = [
     "--ignore-glob=**/test_*_exercise.py",
     "--ignore-glob=**/test_*_common.py",
     "--ignore-glob=**/template/**",
+    "--import-mode=importlib",
 ]
-pythonpath = ["python", "python/01_hello_world", "python/02_variables", "python/03_casting", "python/04_strings", "python/05_operators", "python/template"]
+pythonpath = ["python", "python/01_hello_world", "python/02_variables", "python/03_casting", "python/template"]

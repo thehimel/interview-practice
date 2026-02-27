@@ -1,4 +1,4 @@
-from solutions.test_format_solution import create_format_test_class
+from ..solutions.test_format_solution import create_format_test_class
 
 from . import format as format_module
 

@@ -1,4 +1,4 @@
-from solutions.test_comparison_solution import create_comparison_test_class
+from ..solutions.test_comparison_solution import create_comparison_test_class
 
 from .comparison import comparison
 

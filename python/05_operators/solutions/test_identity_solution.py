@@ -1,6 +1,9 @@
 import pytest
+from importlib import import_module
 
-from .identity import equality_check, identity_check
+identity_module = import_module("05_operators.solutions.identity")
+identity_check = identity_module.identity_check
+equality_check = identity_module.equality_check
 
 
 def create_identity_test_class(identity_fn, equality_fn):

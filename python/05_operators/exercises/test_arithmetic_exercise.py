@@ -1,4 +1,4 @@
-from solutions.test_arithmetic_solution import create_arithmetic_test_class
+from ..solutions.test_arithmetic_solution import create_arithmetic_test_class
 
 from .arithmetic import arithmetic
 

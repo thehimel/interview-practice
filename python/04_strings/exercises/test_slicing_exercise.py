@@ -1,4 +1,4 @@
-from solutions.test_slicing_solution import create_slicing_test_class
+from ..solutions.test_slicing_solution import create_slicing_test_class
 
 from . import slicing
 
