@@ -6,8 +6,8 @@ This exercise covers Python string operations in six topics. Each function has a
 
 **File structure:**
 
-- `solution/` – Reference implementations by subtopic: `concatenation.py`, `format.py`, `modify.py`, `search.py`, `slicing.py`, `types.py`
-- `exercise/` – Stub implementations in the same structure for practice
+- `solutions/` – Reference implementations by subtopic: `concatenation.py`, `format.py`, `modify.py`, `search.py`, `slicing.py`, `types.py`
+- `exercises/` – Stub implementations in the same structure for practice
 
 **Topics:**
 
@@ -131,6 +131,23 @@ Both return the lowest index where the substring is found. The difference is whe
 | `"²"`   | ✓           | ✓             |
 | `"½"`   | ✗           | ✓             |
 | `"Ⅷ"`   | ✗           | ✓             |
+
+## Running Tests
+
+```bash
+# From project root
+pytest python/04_strings/solutions/ -v   # Run solution tests
+pytest python/04_strings/exercises/ -v   # Run exercise tests
+```
+
+## PyCharm Import Warnings
+
+If PyCharm underlines imports in red, mark this directory as a **Sources Root**:
+
+1. Right-click `python/04_strings` in the Project tool window
+2. **Mark Directory as** → **Sources Root**
+
+This adds the directory to the Python path so PyCharm can resolve imports. Restart PyCharm if the warnings persist.
 
 ## Resources
 

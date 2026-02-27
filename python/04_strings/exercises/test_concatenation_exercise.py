@@ -1,0 +1,5 @@
+from solutions.test_concatenation_solution import create_concatenation_test_class
+
+from . import concatenation
+
+TestConcatenationExercise = create_concatenation_test_class(concatenation)
