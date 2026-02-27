@@ -8,6 +8,8 @@ This exercise covers Python string operations in six topics. Each function has a
 
 - `solutions/` – Reference implementations by subtopic: `concatenation.py`, `format.py`, `modify.py`, `search.py`, `slicing.py`, `types.py`
 - `exercises/` – Stub implementations in the same structure for practice
+- `solutions/test_*_solution.py` – Per-topic test logic and solution tests
+- `exercises/test_*_exercise.py` – Per-topic exercise tests (use logic from solution test files)
 
 **Topics:**
 

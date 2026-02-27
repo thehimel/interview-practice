@@ -7,6 +7,13 @@ Practice Python operators: arithmetic, assignment, comparison, identity, logical
 1. **Read [notes.md](./notes.md)** — Understand the concepts and conventions for each operator type.
 2. **Practice** — Implement the exercises in [exercises](exercises). Reference implementations are in [solutions](solutions).
 
+## File Structure
+
+- `solutions/` – Reference implementations: `arithmetic.py`, `assignment.py`, `comparison.py`, `identity.py`, `logical_membership.py`
+- `exercises/` – Stub implementations in the same structure for practice
+- `solutions/test_*_solution.py` – Per-topic test logic and solution tests
+- `exercises/test_*_exercise.py` – Per-topic exercise tests (use logic from solution test files)
+
 ## Exercises
 
 | Exercise                 | Function                                            | Description                                                      |

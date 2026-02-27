@@ -1,15 +1,28 @@
+"""Test logic for variables topic."""
+
 from importlib import import_module
 
-from test_variables_common import assert_assign_globals, assert_get_types
+EXPECTED_TYPES = (str, int, float)
+EXPECTED_NAME = "Apple"
+EXPECTED_QUANTITY = 2
+EXPECTED_WEIGHT = 4.2
+
+
+def create_variables_test_class(module):
+    """Create a test class that runs variables assertions against the given module."""
+
+    class TestVariables:
+        def test_get_types(self):
+            assert module.get_types() == EXPECTED_TYPES
+
+        def test_assign_globals(self):
+            module.assign_globals()
+            assert module.X == EXPECTED_NAME
+            assert module.Y == EXPECTED_QUANTITY
+            assert module.Z == EXPECTED_WEIGHT
+
+    return TestVariables
+
 
 solution = import_module("02_variables.solution")
-assign_globals = solution.assign_globals
-get_types = solution.get_types
-
-
-class TestSolution:
-    def test_get_types(self):
-        assert_get_types(get_types)
-
-    def test_assign_globals(self):
-        assert_assign_globals(assign_globals, solution)
+TestVariablesSolution = create_variables_test_class(solution)

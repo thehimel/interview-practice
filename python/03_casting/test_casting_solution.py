@@ -1,11 +1,19 @@
+"""Test logic for casting topic."""
+
 from importlib import import_module
 
-from test_casting_common import assert_cast
+EXPECTED = (222, 82.6, "66")
+
+
+def create_casting_test_class(cast_fn):
+    """Create a test class that runs casting assertions against the given function."""
+
+    class TestCasting:
+        def test_cast(self):
+            assert cast_fn() == EXPECTED
+
+    return TestCasting
+
 
 solution = import_module("03_casting.solution")
-cast = solution.cast
-
-
-class TestSolution:
-    def test_cast(self):
-        assert_cast(cast)
+TestCastingSolution = create_casting_test_class(solution.cast)
