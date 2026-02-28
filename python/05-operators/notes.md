@@ -141,3 +141,29 @@ Check whether an element or substring exists in a string, list, tuple, or dict k
 |-----------|
 | `in`      |
 | `not in`  |
+
+## Interview Questions
+
+### When should you use `is` vs `==`?
+
+Use `is` for `None`, singletons, and sentinels. Use `==` for value comparison. `is` cannot be overridden; `==` uses `__eq__`.
+
+### Why use `if x is None` instead of `if x == None`?
+
+`is` checks object identity; `==` checks value equality. `None` is a singleton, so `is None` is idiomatic and slightly faster. `== None` can be overridden by custom `__eq__` and is less clear.
+
+### What is a sentinel and when do you use one?
+
+A sentinel is a unique placeholder when `None` is a valid value. Create with `MISSING = object()` and detect with `if default is MISSING`. Use `is` to distinguish "no value provided" from `None`.
+
+### What is the difference between `/` and `//`?
+
+`/` is true division (float result); `//` is floor division (integer quotient). `-7 // 2` → `-4` (rounds toward negative infinity).
+
+### What does the walrus operator `:=` do?
+
+Assigns and returns the value in one expression. Use in `if` or `while`: `if (n := len(data)) > 0: ...` — assigns `n` and uses it in the condition.
+
+### How does short-circuit evaluation work with `and` and `or`?
+
+`and` stops at first falsy; `or` stops at first truthy. Use for safe access: `x and x.method()` or `value or default`.

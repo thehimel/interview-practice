@@ -243,3 +243,29 @@ temp = list(nums)
 temp.sort()
 tuple(temp)  # (2, 4, 6, 8, 10)
 ```
+
+## Interview Questions
+
+### Why use a tuple instead of a list?
+
+Immutability (safe as dict key, set element); slightly less memory; semantic "fixed structure." Tuples are hashable if all elements are hashable.
+
+### How do you create a single-element tuple?
+
+Use a trailing comma: `(2,)`. Without the comma, `(2)` is just an integer in parentheses.
+
+### Can you "modify" a tuple? How?
+
+Tuples are immutable. To change, add, or remove elements, convert to list, modify, convert back: `tuple(list(t))` or use `+` for concatenation.
+
+### What does `*` do in tuple unpacking?
+
+Collects remaining elements into a list: `first, *rest = nums` → `rest = [4, 6, 8, 10]`. Use at any position: `a, *mid, z = nums`.
+
+### How do you sort a tuple?
+
+`tuple(sorted(t))` — `sorted()` returns a list, so wrap in `tuple()`. Use `key` for custom order: `tuple(sorted(t, key=fn))`.
+
+### Why does a tuple have only `count` and `index`?
+
+Tuples are immutable, so they have no mutating methods. `count` and `index` are the only read-only operations needed; no `append`, `remove`, `sort`, or `reverse`.

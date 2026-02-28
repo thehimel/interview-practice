@@ -528,3 +528,37 @@ In other words: sort as if each element were `key(element)`.
 | **Custom**         | `fn`                      | `items.sort(key=fn)`                      | By return value of `fn(x)`       | Any custom comparison               |
 
 **Rule:** Pass the function reference, not a call; use `key=len`, not `key=len(x)`. Python calls it once per element.
+
+## Interview Questions
+
+### What is the time complexity of list append, insert, and index lookup?
+
+Append O(1) amortized; insert O(n); index lookup O(1); `in` O(n). List is a dynamic array.
+
+### When to use `+` vs `extend()`?
+
+Use `+` when you want a new list; both operands must be lists. Use `extend()` when you want to grow the list in place; it accepts any iterable and mutates.
+
+### When does shallow vs deep copy matter for lists?
+
+Shallow copy is fine for flat lists or immutable elements. Use deep copy when the list contains nested mutable structures (lists, dicts) and you need to modify the copy without affecting the original.
+
+### `lst = [...]` vs `lst[:] = [...]` — what is the difference?
+
+`lst = [...]` rebinds the variable to a new list; other references still see the old list. `lst[:] = [...]` replaces the contents of the existing list in place; all references see the updated list.
+
+### `remove()` vs `pop()` — when to use each?
+
+`remove(x)` removes the first occurrence by value; raises `ValueError` if missing; returns `None`. `pop(i)` removes by index (default last); returns the removed element; raises `IndexError` if out of range. Use `pop()` when you need the value or know the index.
+
+### `sort()` vs `sorted()` — in place vs new list?
+
+`sort()` mutates the list in place and returns `None`. `sorted()` returns a new list and leaves the original unchanged. Use `sort()` when you can mutate; use `sorted()` when you need to keep the original.
+
+### How does the `key` parameter work in `sort()`?
+
+For each element `x`, Python computes `key(x)` and sorts by comparing those values. Pass the function reference: `key=len`, not `key=len(x)`.
+
+### Why use index-based reverse loop instead of `reversed()`?
+
+When you need to **modify** elements by index (swap, overwrite, remove), you must have the index. `reversed()` and `lst[::-1]` give values, not indices. The index-based pattern also avoids index shifting when removing in place and translates to other languages.
