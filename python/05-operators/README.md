@@ -1,47 +1,169 @@
-# Operators
+# Operators Topics
 
-Practice Python operators: arithmetic, assignment, comparison, identity, logical, and membership.
+Operator categories and concepts to include when building the operators practice module.
 
-## How to Use
+## Arithmetic Operators
 
-1. **Read [notes.md](./notes.md)** — Understand the concepts and conventions for each operator type.
-2. **Practice** — Implement the exercises in [exercises](exercises). Reference implementations are in [solutions](solutions).
+Apply these to numbers for basic math (add, subtract, multiply, divide, etc.).
 
-## File Structure
+| Operator | Name           |
+|----------|----------------|
+| `+`      | Addition       |
+| `-`      | Subtraction    |
+| `*`      | Multiplication |
+| `/`      | Division       |
+| `//`     | Floor division |
+| `%`      | Modulus        |
+| `**`     | Exponentiation |
 
-- `solutions/` – Reference implementations: `arithmetic.py`, `assignment.py`, `comparison.py`, `identity.py`, `logical_membership.py`
-- `exercises/` – Stub implementations in the same structure for practice
-- `solutions/test_*_solution.py` – Per-topic test logic and solution tests
-- `exercises/test_*_exercise.py` – Per-topic exercise tests (use logic from solution test files)
+## Assignment Operators
 
-## Exercises
+Perform a math operation and assign the result back to the variable in one step.
 
-| Exercise                 | Function                                            | Description                                                      |
-|--------------------------|-----------------------------------------------------|------------------------------------------------------------------|
-| **Arithmetic**           | `arithmetic(x, y, op)`                              | Apply `+`, `-`, `*`, `/`, `%`, `**`, `//` to numbers             |
-| **Assignment**           | `assignment(x, n, op)`, `walrus(value)`             | Walrus `:=` and compound assignment (`+=`, `-=`, etc.)           |
-| **Comparison**           | `comparison(x, y, op)`                              | Apply `==`, `!=`, `>`, `<`, `>=`, `<=` and return result strings |
-| **Identity**             | `identity_check(x, op)`, `equality_check(x, y, op)` | `is`/`is not` for None and True; `==`/`!=` for values            |
-| **Logical & Membership** | `check(nums, x, y)`                                 | Combine `in`, `not in`, `and`, `or`, `is None` with conditionals |
+| Operator | Name                   | Example     | Equivalent   | Result |
+|----------|------------------------|-------------|--------------|--------|
+| `=`      | Assignment             | `z = 12`    | —            | `12`   |
+| `+=`     | Addition assignment    | `z += 4`    | `z = z + 4`  | `16`   |
+| `-=`     | Subtraction assignment | `z -= 2`    | `z = z - 2`  | `14`   |
+| `*=`     | Multiplication assign. | `z *= 2`    | `z = z * 2`  | `28`   |
+| `/=`     | Division assignment    | `z /= 4`    | `z = z / 4`  | `7.0`  |
+| `%=`     | Modulus assignment     | `z %= 4`    | `z = z % 4`  | `3`    |
+| `//=`    | Floor division assign. | `z //= 3`   | `z = z // 3` | `1`    |
+| `**=`    | Exponentiation assign. | `z **= 2`   | `z = z ** 2` | `1`    |
+| `:=`     | Walrus                 | `(z := 16)` | —            | `16`   |
 
-## Running Tests
+## Comparison Operators
 
-```bash
-# From project root
-pytest python/05-operators/solutions/ -v   # Run solution tests
-pytest python/05-operators/exercises/ -v   # Run exercise tests
+Evaluate whether two values satisfy a relation (equal, less than, greater than, etc.).
+
+| Operator | Name                     |
+|----------|--------------------------|
+| `==`     | Equal                    |
+| `!=`     | Not equal                |
+| `>`      | Greater than             |
+| `<`      | Less than                |
+| `>=`     | Greater than or equal to |
+| `<=`     | Less than or equal to    |
+
+## Identity Operators
+
+Check whether two references point to the same object in memory.
+
+| Operator  |
+|-----------|
+| `is`      |
+| `is not`  |
+
+**Why use `is` and `is not`?**
+
+- **`is`** checks **object identity** (same object in memory), not value equality
+- **`==`** checks value equality; **`is`** checks object identity
+- **`is not`** is the negation of `is`
+
+**Key terms:**
+
+- **Singleton** — A single object that exists only once in memory; all references point to the same instance (e.g. `None`, `True`, `False`).
+- **Sentinel** — A unique placeholder object used when `None` is a valid value; you need a distinct "no value provided" marker (e.g. `MISSING = object()`).
+
+**Typical uses:**
+
+1. **`None` checks** — `if x is None` and `if x is not None` are the standard, idiomatic way
+2. **Sentinels** — `object()` creates a unique instance; use `is` to detect "no value provided":
+   ```python
+   MISSING = object()
+   def get(key, default=MISSING):
+       if default is MISSING:
+           return fetch(key)
+       return default
+   ```
+3. **Boolean flags** — `if flag is True` or `if flag is False` when you need the exact boolean, not just truthiness
+4. **Singletons** — e.g. small integers may share cached objects:
+   ```python
+   a = 256
+   b = 256
+   a is b   # True (same cached object)
+
+   # In separate statements, 257 is above cache range
+   x = 257
+   y = 257
+   x is y   # False (different objects; cache is -5 to 256)
+   ```
+   Note: `x, y = 257, 257` in one statement is `True` due to constant folding.
+
+**`is` vs `==`:**
+
+| Check          | `is`    | `==`   |
+|----------------|---------|--------|
+| `[] == []`     | `False` | `True` |
+| `None is None` | `True`  | `True` |
+| `1 == 1.0`     | `False` | `True` |
+
+`==` can be overridden via `__eq__`; `is` cannot.
+
+**Conventions:**
+
+- Use **`is`** / **`is not`** for `None` and singletons (e.g. sentinels, `True`, `False`)
+- Use **`==`** / **`!=`** for comparing values (numbers, strings, collections, custom objects)
+
+**Example:**
+
+```python
+# is / is not — for None and singletons
+if result is None:
+    print("no result")
+if value is not None:
+    print(value)
+
+# == / != — for values
+if count == 0:
+    print("empty")
+if name == "admin":
+    print("admin")
+if items != []:
+    print(items)
 ```
 
-## PyCharm Import Warnings
+## Logical Operators
 
-If PyCharm underlines imports in red, mark this directory as a **Sources Root**:
+Chain or negate boolean conditions.
 
-1. Right-click `python/05-operators` in the Project tool window
-2. **Mark Directory as** → **Sources Root**
+| Operator |
+|----------|
+| `and`    |
+| `or`     |
+| `not`    |
 
-This adds the directory to the Python path so PyCharm can resolve imports. Restart PyCharm if the warnings persist.
+## Membership Operators
 
-## Resources
+Check whether an element or substring exists in a string, list, tuple, or dict keys.
 
-- [notes.md](./notes.md) — Operator categories, conventions, and examples
-- [Python Operators](https://www.w3schools.com/python/python_operators.asp)
+| Operator  |
+|-----------|
+| `in`      |
+| `not in`  |
+
+## Interview Questions
+
+### When should you use `is` vs `==`?
+
+Use `is` for `None`, singletons, and sentinels. Use `==` for value comparison. `is` cannot be overridden; `==` uses `__eq__`.
+
+### Why use `if x is None` instead of `if x == None`?
+
+`is` checks object identity; `==` checks value equality. `None` is a singleton, so `is None` is idiomatic and slightly faster. `== None` can be overridden by custom `__eq__` and is less clear.
+
+### What is a sentinel and when do you use one?
+
+A sentinel is a unique placeholder when `None` is a valid value. Create with `MISSING = object()` and detect with `if default is MISSING`. Use `is` to distinguish "no value provided" from `None`.
+
+### What is the difference between `/` and `//`?
+
+`/` is true division (float result); `//` is floor division (integer quotient). `-7 // 2` → `-4` (rounds toward negative infinity).
+
+### What does the walrus operator `:=` do?
+
+Assigns and returns the value in one expression. Use in `if` or `while`: `if (n := len(data)) > 0: ...` — assigns `n` and uses it in the condition.
+
+### How does short-circuit evaluation work with `and` and `or`?
+
+`and` stops at first falsy; `or` stops at first truthy. Use for safe access: `x and x.method()` or `value or default`.
