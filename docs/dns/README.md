@@ -44,7 +44,7 @@ Using Vercel nameservers is the simplest approach—Vercel manages all DNS for t
 
 When configured correctly, both domains show **Valid Configuration** in Vercel. The apex domain (`interviewrank.io`) redirects (307) to the canonical `www` subdomain, which serves the production deployment:
 
-![Vercel domain configuration: interviewrank.io and www.interviewrank.io with valid configuration](assets/image.png)
+![Vercel domain configuration: interviewrank.io and www.interviewrank.io with valid configuration](assets/domain-configuration.png)
 
 ---
 

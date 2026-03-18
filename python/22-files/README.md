@@ -44,7 +44,7 @@ f = open("log.txt", "a")
 f = open("newfile.txt", "x")
 
 # Binary read
-f = open("image.png", "rb")
+f = open("domain-configuration.png", "rb")
 ```
 
 ## The with Statement
